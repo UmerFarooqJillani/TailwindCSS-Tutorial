@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margin, Padding, Borders</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--            Spacing                     -->
+
+    
+    <!-- Margin -->
+    <h1 class="-mt-3">Umer Farooq Jillani</h1>
+    <h1 class="m-5">Umer Farooq Jillani</h1>
+    <h1 class="mx-20">Umer Farooq Jillani</h1>
+    <h1 class="my-40">Umer Farooq Jillani</h1>
+    <h1 class="mt-5">Umer Farooq Jillani</h1>
+    <h1 class="mb-5">Umer Farooq Jillani</h1>
+    <h1 class="ml-10">Umer Farooq Jillani</h1>
+    
+    <!-- Space Between -->
+    <ul class="flex space-x-5 space-y-5"> <!--These utilities are really just a shortcut for adding margin to
+        all-but-the-first-item in a group, and aren’t designed to handle-->
+        <li>00</li>
+        <li>01</li>
+        <li>02</li>
+        <li>03</li>
+        <li>04</li>
+        <li>05</li>
+    </ul>
+    
+    <!-- Padding -->
+     <div class="flex bg-sky-300 border-2 border-black space-x-10">
+         <div class="p-5 bg-white ">00</div>
+         <div class="pr-5 bg-white ">01</div>
+         <div class="pt-5 bg-white ">02</div>
+         <div class="pr-5 bg-white ">03</div>
+         <div class="pl-5 bg-white ">04</div>
+         <div class="p-5 bg-white ">05</div>
+    </div>
+
+
+    <!--                Borders                     -->
+
+    <!-- Border Radius -->
+     <div class="flex">
+            <div class="border-2 m-10 w-40 border-black h-32 text-center pt-12 rounded-none">
+                Hey, I am box 1.
+            </div>
+            <div class="border-2 m-10 w-40 border-black h-32 text-center pt-12 rounded">
+                Hey, I am box 2.
+            </div>
+            <div class="border-2 m-10 w-40 border-black h-32 text-center pt-12 rounded-sm">
+                Hey, I am box 3.
+            </div>
+            <div class="border-2 m-10 w-40 border-black h-32 text-center pt-12 rounded-md">
+                Hey, I am box 4.
+            </div>
+    </div>
+    <div class="flex">
+        <div class="border-2 m-10 w-40 border-black h-32 text-center pt-12 rounded-xl">
+            Hey, I am box 1.
+        </div>
+        <div class="border-2 m-10 w-40 border-black h-32 text-center pt-12 rounded-2xl">
+            Hey, I am box 2.
+        </div>
+        <div class="border-2 m-10 w-40 border-black h-32 text-center pt-12 rounded-3xl">
+            Hey, I am box 3.
+        </div>
+        <div class="border-2 m-10 w-40 border-black h-32 text-center pt-12 rounded-full">
+            Hey, I am box 4.
+        </div>
+    </div>
+    <div class="flex">
+        <div class="border-2 m-10 w-40 border-black h-32 text-center pt-12 rounded-t-xl">
+            Hey, I am box 1.
+        </div>
+        <div class="border-2 m-10 w-40 border-black h-32 text-center pt-12 rounded-r-xl">
+            Hey, I am box 2.
+        </div>
+        <div class="border-2 m-10 w-40 border-black h-32 text-center pt-12 rounded-b-xl">
+            Hey, I am box 3.
+        </div>
+        <div class="border-2 m-10 w-40 border-black h-32 text-center pt-12 rounded-l-xl">
+            Hey, I am box 4.
+        </div>
+    </div>
+    <!-- 
+        Class	        Left-to-right	Right-to-left
+    
+        rounded-s-*	    rounded-l-*	    rounded-r-*
+        rounded-e-*	    rounded-r-*	    rounded-l-*
+        rounded-ss-*	rounded-tl-*	rounded-tr-*
+        rounded-se-*	rounded-tr-*	rounded-tl-*
+        rounded-es-*	rounded-bl-*	rounded-br-*
+        rounded-ee-*	rounded-br-*	rounded-bl-* 
+    -->
+    <div class="flex">
+        <div class="border-2 m-10 w-40 border-black h-32 text-center pt-12 rounded-s-xl">
+            Hey, I am box 1.
+        </div>
+        <div class="border-2 m-10 w-40 border-black h-32 text-center pt-12 rounded-e-xl">
+            Hey, I am box 2.
+        </div>
+        <div class="border-2 m-10 w-40 border-black h-32 text-center pt-12 rounded-ss-xl">
+            Hey, I am box 3.
+        </div>
+        <div class="border-2 m-10 w-40 border-black h-32 text-center pt-12 rounded-ee-xl">
+            Hey, I am box 4.
+        </div>
+    </div>
+    
+    <!-- Border width -->
+    <div class="flex">
+        <div class="border-0 m-10 w-40 border-black h-32 text-center pt-12 ">
+            Hey, I am box 1.
+        </div>
+        <div class="border-8 m-10 w-40 border-black h-32 text-center pt-6">
+            Hey, I am box 2.
+        </div>
+        <div class="border-x-2 m-10 w-40 border-black h-32 text-center pt-12">
+            Hey, I am box 3.
+        </div>
+        <div class="border-y-2 m-10 w-40 border-black h-32 text-center pt-12">
+            Hey, I am box 4.
+        </div>
+    </div>
+    <div class="flex">
+        <div class="border-t-2 m-10 w-40 border-black h-32 text-center pt-12 ">
+            Hey, I am box 1.
+        </div>
+        <div class="border-r-2 m-10 w-40 border-black h-32 text-center pt-6">
+            Hey, I am box 2.
+        </div>
+        <div class="border-b-2 m-10 w-40 border-black h-32 text-center pt-12">
+            Hey, I am box 3.
+        </div>
+        <div class="border-l-2 m-10 w-40 border-black h-32 text-center pt-12">
+            Hey, I am box 4.
+        </div>
+    </div>
+
+    <!-- Border Color -->
+    <div class="flex">
+        <div class="border-4 m-10 w-40 border-black h-32 text-center pt-12 ">
+            Hey, I am box 1.
+        </div>
+        <div class="border-4 m-10 w-40 border-t-orange-300 h-32 text-center pt-6">
+            Hey, I am box 2.
+        </div>
+        <div class="border-4 m-10 w-40 border-r-black h-32 text-center pt-12">
+            Hey, I am box 3.
+        </div>
+        <div class="border-4 m-10 w-40 border-b-black h-32 text-center pt-12">
+            Hey, I am box 4.
+        </div>
+    </div>
+
+    <!-- Border Style -->
+    <div class="flex">
+        <div class="border-solid border-2 border-black m-10 w-40 h-32 text-center pt-12 ">
+            Hey, I am box 1.
+        </div>
+        <div class="border-double border-2 border-black m-10 w-40 h-32 text-center pt-12 ">
+            Hey, I am box 2.
+        </div>
+        <div class="border-dashed border-2 border-black m-10 w-40 h-32 text-center pt-12 ">
+            Hey, I am box 3.
+        </div>
+        <div class="border-dotted border-2 border-black m-10 w-40 h-32 text-center pt-12 ">
+            Hey, I am box 4.
+        </div>
+    </div>
+
+    <!-- Borders Divide Width -->
+    <ul class="grid grid-cols-3 divide-x-2 bg-gray-400 text-center">
+        <li>01</li>
+        <li>02</li>
+        <li>03</li>
+    </ul>
+    <br>
+    <ul class="grid grid-rows-3 divide-y-2 bg-gray-400 text-center">
+        <li>01</li>
+        <li>02</li>
+        <li>03</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS Layers and Directives</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--            Tailwind CSS Layers and Directives              -->
+
+    <!-- 
+        Tailwind CSS Layers in style.css File
+
+    Tailwind CSS organizes its styles into three primary layers: 
+            1- Base 
+            2- Components
+            3- Utilities 
+    These layers allow you to structure your styles in a maintainable and hierarchical way, 
+    ensuring predictable behavior when styles overlap or override each other.
+
+    Tailwind Layers
+        1- Base Layer
+            -> Contains styles that provide defaults for basic HTML elements.
+            -> Similar to a browser's "reset" or "normalize" stylesheets.
+                Example:
+                    css
+                        h1 {
+                            font-size: 2rem;
+                        }
+        2- Components Layer
+            -> Used for reusable components or higher-level UI patterns.
+            -> Includes styles for specific design patterns like buttons, cards, etc.
+                Example:
+                    css
+                        .btn {
+                            padding: 0.5rem 1rem;
+                            border-radius: 0.25rem;
+                        }
+        3- Utilities Layer
+            -> Contains single-purpose utility classes for styling (e.g., p-4, text-center, bg-blue-500).
+            -> These classes are most commonly used when writing Tailwind styles directly in your HTML.
+                Example:
+                    html
+                        <div class="text-center text-xl bg-gray-200">
+                            Hello
+                        </div>
+
+
+    Directives in Tailwind CSS
+        1. @tailwind
+            -> This directive is used to include the Tailwind layers (base, components, and utilities) 
+               into your CSS.
+                Example:
+                    css
+                        @tailwind base;
+                        @tailwind components;
+                        @tailwind utilities;
+            -> Why Sequence is Important:
+                The order matters because:
+                    - Base styles provide foundational defaults.
+                    - Components build on or override base styles.
+                    - Utilities provide the most specific styles and override components if necessary.
+                    - If the order is incorrect, styles may behave unpredictably.
+        2. @apply
+            -> Allows you to apply Tailwind utility classes within your own CSS file to create custom styles.
+                Example:
+                    css
+                        .btn {
+                            @apply bg-blue-500 text-white font-bold py-2 px-4 rounded;
+                        }
+            -> Why It's Useful:
+                - Reduces repetitive utility classes in HTML.
+                - Helps create reusable, maintainable styles.
+        3. @layer
+            -> Used to add custom styles to a specific Tailwind layer (base, components, or utilities).
+                Example:
+                    css
+                        @layer base {
+                            h1 {
+                                @apply text-2xl font-bold;
+                            }
+                        }
+                        @layer components {
+                            .card {
+                                @apply shadow-lg p-4 rounded bg-white;
+                            }
+                        }
+                        @layer utilities {
+                            .bg-gradient {
+                                background: linear-gradient(to right, #4facfe, #00f2fe);
+                            }
+                        }
+            -> Why It's Important:
+                - Ensures your custom styles integrate seamlessly into the Tailwind framework.
+                - Maintains proper layer hierarchy, so custom styles override.
+        4. @config
+            -> Used to import another Tailwind configuration file within the current configuration.
+                Example:
+                    css
+                        @config "./tailwind.custom.config.js";
+            -> Why It's Useful:
+                - Helps modularize and manage configurations for large projects.
+    -->
+
+    <!--See the @apply in style.css file and it's Problems-->
+    
+    <div class="flex justify-center mt-5">
+        <button class="btn bg-green-300">
+            <!--in style.css file btn# 502 and bg-green-300# 550 so, its override/change in css-->
+            SBMIT NOW
+        </button>
+    </div>
+    <!-- 
+        -> sequence are matters in CSS file
+            The sequence in a CSS file matters because styles are applied in the order they appear, following CSS's cascading
+            and specificity rules. Here's why:
+                Later styles override earlier ones if they target the same elements with equal specificity.
+                    css
+                        p {
+                            color: blue;
+                        }
+                        p {
+                            color: red; /* This takes effect because it comes later. */
+                        } 
+    -->
+    <div class="flex justify-center mt-5">
+        <button class="btn2 bg-yellow-300">
+            <!--in style.css file btn2# 600 and bg-yellow-300# 558 so, its override in css -->
+            SBMIT NOW
+        </button>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover, Focus, and Other States</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--               Hover, Focus, and Other States               -->
+    
+    <!-- Pseudo-classes -->
+
+    <!-- Hover, Focus, and Active -->
+    <div class=" flex space-x-5 m-5">
+        <button class="bg-green-400 p-5 rounded-lg border-solid border-2 border-black 
+                       hover:bg-green-500 hover:text-white">Hover</button>
+        <!-- 
+            Focus: When you Tab to the button, it gets a blue outline.
+            Active: When you click and hold the button, it darkens and shrinks slightly. 
+        -->
+        <button class="bg-green-400 p-5 rounded-lg border-solid border-2 border-black 
+                       focus:bg-green-500 focus:text-white">Focus</button>
+        <button 
+        class="bg-green-400 p-5 rounded-lg border-solid border-2 border-black
+               active:bg-green-500 active:text-white">Active</button>
+    </div>
+
+    <!-- Styling direct children -->
+    <div>
+        <ul class="flex *:p-5 *:bg-sky-300 space-x-5 *:rounded-md">
+            <li>01</li>
+            <li>02</li>
+            <li>03</li>
+            <li>04</li>
+            <li>05</li>
+        </ul>
+    </div>
+
+    <!-- Pseudo-elements -->
+
+    <!-- Before and after -->
+    <label class="block">
+        <span class="after:content-['*'] after:ml-0.5 after:text-red-500 before:content-['123'] 
+                     block text-sm font-extrabold text-slate-700">Email</span>
+        <input type="email" name="email" class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" placeholder="you@example.com" />
+      </label>
+
+    <!-- 
+        -> Placeholder text
+        -> File input buttons
+        -> List markers
+        -> Highlighted text
+        -> First-line and first-letter 
+    -->
+
+</body>
+</html>
